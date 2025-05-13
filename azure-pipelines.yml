@@ -19,13 +19,13 @@ stages:
     displayName: Build image
     jobs:
       - job: Build
-        displayName: Build
+        displayName: Build And Push
         steps:
           - task: Docker@2
             displayName: Build and push and image to container registry
             inputs:
               command: buildAndPush
-              respository: devops-cmtraining-node-endpoint
+              repository: devops-cmtraining-node-endpoint
               dockerfile: "$(Build.SourcesDirectory)/Dockerfile"
               containerRegistry: devops-acr-connection
               tags: |
