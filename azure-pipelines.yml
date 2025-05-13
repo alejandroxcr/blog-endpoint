@@ -29,6 +29,6 @@ stages:
               command: buildAndPush
               respository: devops-cmtraining-node-endpoint
               dockerfile: "$(Build.SourcesDirectory)/Dockerfile"
-              containerRegistry: devopscontainerregistrycmtraining
+              containerRegistry: devops-acr-connection
               tags: |
                 $(tag)
